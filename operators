@@ -1,0 +1,98 @@
+mysql> desc STUD101;
++--------+--------------+------+-----+---------+-------+
+| Field  | Type         | Null | Key | Default | Extra |
++--------+--------------+------+-----+---------+-------+
+| SNO    | varchar(10)  | NO   |     | NULL    |       |
+| SNAME  | varchar(100) | NO   |     | NULL    |       |
+| COURSE | varchar(100) | NO   |     | NULL    |       |
+| PHNO   | int(11)      | NO   |     | NULL    |       |
++--------+--------------+------+-----+---------+-------+
+4 rows in set (10.76 sec)
+
+mysql> SELECT -4 from dual;
++----+
+| -4 |
++----+
+| -4 |
++----+
+1 row in set (0.08 sec)
+
+mysql> SELECT -3 from dual;
++----+
+| -3 |
++----+
+| -3 |
++----+
+1 row in set (0.00 sec)
+
+mysql> SELECT * from emp1;
+Empty set (1.60 sec)
+
+mysql> SELECT * from employee;
++--------+----------+--------+
+| emp_id | Emp_name | salary |
++--------+----------+--------+
+|    101 | naveen   |  20000 |
+|    102 | varun    |  25000 |
+|    103 | tanuja   |  30000 |
+|    104 | sudhakar |  22500 |
++--------+----------+--------+
+4 rows in set (0.40 sec)
+
+mysql> SELECT salary*5 from employee;
++----------+
+| salary*5 |
++----------+
+|   100000 |
+|   125000 |
+|   150000 |
+|   1120500|
++----------+
+4 rows in set (0.10 sec)
+
+mysql> SELECT salary+2000 from employee;
++-------------+
+| salary+2000 |
++-------------+
+|       22000 |
+|       27000 |
+|       32000 |
+|       24500 |
++-------------+
+4 rows in set (0.03 sec)
+
+mysql> SELECT salary-100 from employee;
++------------+
+| salary-100 |
++------------+
+|      19900 |
+|      24900 |
+|      29900 |
+|      22400 |
++------------+
+4 rows in set (0.02 sec)
+
+mysql> SELECT Emp_name "employee" from employee where salary=19900;
+Empty set (0.13 sec)
+
+mysql> SELECT Emp_name "emp" from employee where salary=24900;
+Empty set (0.00 sec)
+
+mysql> SELECT Emp_name "sandhya" from employee where salary=19900;
+Empty set (0.00 sec)
+
+mysql> SELECT Emp_name  from employee where salary>9900;
++----------+
+| Emp_name |
++----------+
+| jhansi   |
+| suji     |
+| navya    |
+| madhavi  |
++----------+
+4 rows in set (0.02 sec)
+
+mysql> SELECT Emp_name  from employee where 
+salary<9900;
+Empty set (0.00 sec)
+
